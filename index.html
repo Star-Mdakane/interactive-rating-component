@@ -19,40 +19,47 @@
     <!-- Rating state start -->
     <section class="main card">
       <div class="wrapper">
-        <div class="icon">
-          <img src="./images/icon-star.svg" width="13.96" height="13.33" alt="star icon">
+        <div class="icon-container">
+          <div class="icon">
+            <img src="./images/icon-star.svg" width="13.96" height="13.33" alt="star icon">
+          </div>
         </div>
         <form id="content">
-          <h1>
+          <h1 class="font-1">
             How did we do?
           </h1>
           <fieldset>
-            <legend>Please let us know how we did with your support request. All feedback is appreciated
+            <legend class="font-5-reg">Please let us know how we did with your support request. All feedback is
+              appreciated
               to help us improve our offering!</legend>
-            <div class="form-group">
-              <input type="radio" name="rating" id="1">
-              <label for="1">1</label>
+
+            <div class="form-group-container">
+              <div class="form-group">
+                <input type="radio" name="rating" id="1">
+                <label class="font-5-bold" for="1">1</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="rating" id="2">
+                <label class="font-5-bold" for="2">2</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="rating" id="3">
+                <label class="font-5-bold" for="3">3</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="rating" id="4">
+                <label class="font-5-bold" for="4">4</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" name="rating" id="5">
+                <label class="font-5-bold" for="5">5</label>
+              </div>
             </div>
-            <div class="form-group">
-              <input type="radio" name="rating" id="2">
-              <label for="2">2</label>
-            </div>
-            <div class="form-group">
-              <input type="radio" name="rating" id="3">
-              <label for="3">3</label>
-            </div>
-            <div class="form-group">
-              <input type="radio" name="rating" id="4">
-              <label for="4">4</label>
-            </div>
-            <div class="form-group">
-              <input type="radio" name="rating" id="5">
-              <label for="5">5</label>
-            </div>
+
           </fieldset>
         </form>
         <div class="submit-container">
-          <button form="content" type="submit">Submit</button>
+          <button class="font-5-bold" form="content" type="submit">Submit</button>
         </div>
       </div>
     </section>
@@ -64,19 +71,20 @@
         <div class="payent-icon">
           <img src="./images/illustration-thank-you.svg" width="144" height="96" alt="payment icon">
         </div>
-        <div class="rating-containner">
-          <p class="rating-scored">
-            You selected <!-- Add rating here --> out of 5
+        <div class="rating-container">
+          <p class="rating-scored font-5-reg">
+            You selected 4 out of 5
           </p>
         </div>
-        <div class="msg-container"></div>
-        <h1>
-          Thank you!
-        </h1>
-        <p>
-          We appreciate you taking the time to give a rating. If you ever need more support,
-          don’t hesitate to get in touch!
-        </p>
+        <div class="msg-container">
+          <h1 class="font-2-bold">
+            Thank you!
+          </h1>
+          <p class="font-5-reg">
+            We appreciate you taking the time to give a rating. If you ever need more support,
+            don’t hesitate to get in touch!
+          </p>
+        </div>
       </div>
     </section>
     <!-- Thank you state end -->

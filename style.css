@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --gradient: linear-gradient(to top, rgb(35, 42, 52), rgb(24, 30, 39));
+    --gradient: linear-gradient(to bottom, rgb(35, 42, 52), rgb(24, 30, 39));
     --white: #fff;
     --black: #000;
     --gy950: rgb(19, 21, 24);
@@ -71,4 +71,160 @@
     line-height: 22px;
     letter-spacing: 0px;
     font-weight: 400;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gy950);
+    margin: 0 auto;
+}
+
+.main.card {
+    width: 327px;
+    height: 360px;
+    padding: 24px;
+    border-radius: 15px;
+    background: var(--gradient);
+}
+
+.main {
+    display: none;
+}
+
+.main .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.icon-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--gy900);
+    display: grid;
+    place-content: center;
+    border-radius: 20px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    margin-bottom: 16px;
+    color: var(--gy500);
+}
+
+#content h1 {
+    color: var(--white);
+}
+
+.form-group-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-group {}
+
+.form-group label {
+    display: grid;
+    place-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: var(--gy900);
+    color: var(--gy500);
+    border-radius: 21px;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+.submit-container {
+    width: 100%;
+}
+
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    padding: 16px 104px;
+    color: var(--gy950);
+    background-color: var(--orange);
+    border-radius: 22.5px;
+    width: 100%;
+}
+
+.thanks.card {
+    width: 327px;
+    height: 360px;
+    padding: 32px 24px;
+    border-radius: 15px;
+    background: var(--gradient);
+}
+
+.thanks {
+    /* display: none; */
+}
+
+.thanks .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.rating-container {
+    padding: 5px 16px;
+    background-color: var(--gy900);
+    color: var(--orange);
+    border-radius: 22.5px;
+}
+
+.msg-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.msg-container h1 {
+    color: var(--white);
+}
+
+.msg-container p {
+    color: var(--gy500);
 }
