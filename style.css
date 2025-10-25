@@ -99,7 +99,7 @@ main {
 }
 
 .main {
-    display: none;
+    /* display: none; */
 }
 
 .main .wrapper {
@@ -164,10 +164,19 @@ legend {
     background-color: var(--gy900);
     color: var(--gy500);
     border-radius: 21px;
+    transition: background-color 0.2s;
 }
 
 input[type='radio'] {
-    display: none;
+    opacity: 0;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .submit-container {
@@ -194,7 +203,7 @@ button {
 }
 
 .thanks {
-    /* display: none; */
+    display: none;
 }
 
 .thanks .wrapper {
@@ -228,3 +237,22 @@ button {
 .msg-container p {
     color: var(--gy500);
 }
+
+/* Active states */
+.form-group:hover label {
+    background-color: var(--white);
+    color: var(--gy900);
+}
+
+input[type='radio']:checked+label {
+    background-color: var(--orange);
+    color: var(--gy900);
+}
+
+input[type='radio']:focus+label,
+label:focus-within {
+    background-color: var(--white);
+    color: var(--gy900);
+}
+
+/* Screen sizes */
