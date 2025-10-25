@@ -76,7 +76,7 @@
 /* Page control */
 
 .main {
-    /* display: none; */
+    display: block;
 }
 
 .thanks {
@@ -254,7 +254,7 @@ input[type='radio']:checked+label {
     color: var(--gy900);
 }
 
-/* input[type='radio']:focus+label, */
+input[type='radio']:focus+label,
 label:focus-within {
     background-color: var(--light);
     color: var(--gy900);
