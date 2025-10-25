@@ -10,7 +10,7 @@ form.addEventListener("submit", (e) => {
     const selectedRating = document.querySelector("input[name='rating']:checked");
 
     if (selectedRating) {
-        rating.textContent = ` You selected ${selectedRating.id} out of 5`
+        rating.textContent = ` You selected ${selectedRating.value} out of 5`
         main.style.display = "none";
         thanks.style.display = "block";
         setTimeout(() => {
@@ -20,4 +20,4 @@ form.addEventListener("submit", (e) => {
     } else {
         console.log("No rating selected");
     }
-})
+});
