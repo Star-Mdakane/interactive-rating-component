@@ -2,8 +2,8 @@
 
 :root {
     --gradient: linear-gradient(to bottom, rgb(35, 42, 52), rgb(24, 30, 39));
-    --white: #fff;
-    --black: #000;
+    --light: #fff;
+    --dark: #000;
     --gy950: rgb(19, 21, 24);
     --gy900: rgb(38, 46, 56);
     --gy500: rgb(150, 159, 173);
@@ -73,6 +73,18 @@
     font-weight: 400;
 }
 
+/* Page control */
+
+.main {
+    /* display: none; */
+}
+
+.thanks {
+    display: none;
+}
+
+/* Main styling */
+
 body {
     width: 100vw;
     height: 100vh;
@@ -82,6 +94,7 @@ main {
     width: 100%;
     height: 100%;
     max-width: 1440px;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,10 +109,6 @@ main {
     padding: 24px;
     border-radius: 15px;
     background: var(--gradient);
-}
-
-.main {
-    /* display: none; */
 }
 
 .main .wrapper {
@@ -143,7 +152,7 @@ legend {
 }
 
 #content h1 {
-    color: var(--white);
+    color: var(--light);
 }
 
 .form-group-container {
@@ -153,8 +162,6 @@ legend {
     align-items: center;
     justify-content: space-between;
 }
-
-.form-group {}
 
 .form-group label {
     display: grid;
@@ -175,7 +182,7 @@ input[type='radio'] {
     padding: 0;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
+    light-space: nowrap;
     border: 0;
 }
 
@@ -200,10 +207,6 @@ button {
     padding: 32px 24px;
     border-radius: 15px;
     background: var(--gradient);
-}
-
-.thanks {
-    display: none;
 }
 
 .thanks .wrapper {
@@ -231,7 +234,7 @@ button {
 }
 
 .msg-container h1 {
-    color: var(--white);
+    color: var(--light);
 }
 
 .msg-container p {
@@ -239,9 +242,11 @@ button {
 }
 
 /* Active states */
+
 .form-group:hover label {
-    background-color: var(--white);
+    background-color: var(--light);
     color: var(--gy900);
+    cursor: pointer;
 }
 
 input[type='radio']:checked+label {
@@ -249,10 +254,101 @@ input[type='radio']:checked+label {
     color: var(--gy900);
 }
 
-input[type='radio']:focus+label,
+/* input[type='radio']:focus+label, */
 label:focus-within {
-    background-color: var(--white);
+    background-color: var(--light);
     color: var(--gy900);
 }
 
+button:hover,
+button:focus-visible {
+    cursor: pointer;
+    background-color: var(--light);
+}
+
 /* Screen sizes */
+
+@media(min-width:600px) {
+
+    .font-2 {
+        font-size: 28px;
+        line-height: 35px;
+        letter-spacing: 0px;
+        font-weight: 700;
+    }
+
+    .font-5-bold {
+        font-size: 15px;
+        line-height: 19px;
+        letter-spacing: 2px;
+        font-weight: 700;
+    }
+
+    .font-5-reg {
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        font-weight: 400;
+    }
+
+    .main.card {
+        width: 412px;
+        height: 416px;
+        padding: 24px;
+    }
+
+    .main .wrapper {
+        gap: 32px;
+    }
+
+    .icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .form-group-container {
+        gap: 24px;
+    }
+
+    .form-group label {
+        width: 51px;
+        height: 51px;
+    }
+
+    button {
+        padding: 16px 136px;
+        border-radius: 22.5px;
+        width: 100%;
+    }
+
+    .thanks.card {
+        width: 412px;
+        height: 416px;
+        padding: 40px 32px;
+    }
+
+    .thanks .wrapper {
+        gap: 32px;
+    }
+
+    .payent-icon img {
+        width: 162px;
+        height: 108px;
+    }
+
+    .msg-container {
+        margin-bottom: 40px;
+    }
+}
+
+@media(prefers-color-scheme: light) {
+    :root {
+        --gradient: linear-gradient(to bottom, rgb(220, 213, 203), rgb(35, 42, 52));
+        --light: rgb(255, 255, 255);
+        --dark: #000;
+        --gy950: rgb(236, 234, 231);
+        --gy900: rgb(38, 46, 56);
+        --gy500: rgb(150, 159, 173);
+        --orange: rgb(252, 118, 20);
+    }
+}
